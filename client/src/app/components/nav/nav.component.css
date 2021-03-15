@@ -1,0 +1,12 @@
+.nav-items-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.da-form {
+  margin-left: auto;
+}
+.dropdown-toggle,
+.dropdown-item {
+  cursor: pointer;
+}
