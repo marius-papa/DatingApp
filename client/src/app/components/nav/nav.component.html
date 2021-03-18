@@ -35,7 +35,7 @@
           >Welcome {{ user.username }}</a
         >
         <div class="dropdown-menu mt-3" *dropdownMenu>
-          <a class="dropdown-item">Edit profile</a>
+          <a class="dropdown-item" routerLink="/member/edit">Edit profile</a>
           <a class="dropdown-item" (click)="logout()">Logout</a>
         </div>
       </div>
@@ -68,3 +68,11 @@
     </div>
   </div>
 </nav>
+
+<div class="spinner">
+  <mat-progress-bar
+    *ngIf="loadingService.isLoading$ | async"
+    class="da-progress-bar"
+    mode="indeterminate"
+  ></mat-progress-bar>
+</div>

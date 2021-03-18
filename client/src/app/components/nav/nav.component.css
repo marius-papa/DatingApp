@@ -10,3 +10,8 @@
 .dropdown-item {
   cursor: pointer;
 }
+.spinner {
+  margin-top: 52px;
+  height: 4px;
+  background-color: white;
+}

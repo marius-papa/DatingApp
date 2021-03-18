@@ -27,3 +27,4 @@ export class AppComponent implements OnInit {
   }
 
 }
+// http-server -p 4200 -S -C D:/Marius/ssl/server.crt  -K D:/Marius/ssl/server.key
