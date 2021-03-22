@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { from, Observable, Subscription } from 'rxjs';
 import { AccountService } from '../../_services/account.service';
 import { User } from '../../_models/User'
@@ -11,20 +11,32 @@ import { LoaderService } from '../../_services/loader.service'
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.css']
 })
-export class NavComponent implements OnInit {
+export class NavComponent implements OnInit, OnDestroy {
 
   model: any = {};
-
+  isLoading = false;
+  loadSub: Subscription;
 
   constructor(public accountService: AccountService,
     private router: Router,
     private toast: ToastrService,
     public loadingService: LoaderService) { }
 
-  ngOnInit(): void {
 
+  ngOnInit(): void {
+    this.getIsLoading();
+  }
+  ngOnDestroy(): void {
+    if (this.loadSub) {
+      this.loadSub.unsubscribe();
+    }
   }
 
+  getIsLoading() {
+    this.loadSub = this.loadingService.isLoading$.subscribe(val => {
+      this.isLoading = val
+    })
+  }
 
 
   login() {

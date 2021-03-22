@@ -1,6 +1,7 @@
 .nav-items-wrapper {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
 }
 .da-form {
@@ -11,7 +12,13 @@
   cursor: pointer;
 }
 .spinner {
-  margin-top: 52px;
+  margin-top: 66px;
   height: 4px;
   background-color: white;
+}
+img {
+  max-height: 50px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  display: inline;
 }

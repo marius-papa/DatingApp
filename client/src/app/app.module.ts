@@ -23,6 +23,7 @@ import { MemberEditComponent } from './components/members/member-edit/member-edi
 import { LoaderInterceptor } from './_interceptors/loader.interceptor';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { PhotoEditorComponent } from './components/photo-editor/photo-editor.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { environment } from '../environments/environment';
     MessagesComponent,
     NotFoundComponent,
     ServerErrorComponent,
-    MemberEditComponent
+    MemberEditComponent,
+    PhotoEditorComponent
   ],
   imports: [
     BrowserModule,

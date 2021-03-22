@@ -5,6 +5,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { NgxGalleryModule } from '@kolkov/ngx-gallery';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { FileUploadModule } from 'ng2-file-upload';
 
 
 
@@ -18,14 +19,16 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     }),
     TabsModule.forRoot(),
     NgxGalleryModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    FileUploadModule
   ],
   exports: [
     BsDropdownModule,
     ToastrModule,
     TabsModule,
     NgxGalleryModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    FileUploadModule
   ]
 })
 export class SharedModule { }
