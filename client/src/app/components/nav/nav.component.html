@@ -31,7 +31,8 @@
         *ngIf="accountService.currentUser | async as user"
         dropdown
       >
-        <a class="dropdown-toggle text-light" dropdownToggle
+        <img src="{{ user.photoUrl }}" alt="{{ user.username }}" />
+        <a class="dropdown-toggle text-light ml-2" dropdownToggle
           >Welcome {{ user.username }}</a
         >
         <div class="dropdown-menu mt-3" *dropdownMenu>
@@ -71,7 +72,7 @@
 
 <div class="spinner">
   <mat-progress-bar
-    *ngIf="loadingService.isLoading$ | async"
+    *ngIf="isLoading"
     class="da-progress-bar"
     mode="indeterminate"
   ></mat-progress-bar>
